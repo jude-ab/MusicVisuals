@@ -5,27 +5,47 @@ import processing.core.*;
 
 public class circle {
 
-    MyVisual mv; 
+    MyVisual mv;
+    
 
     public circle(MyVisual mv) {
 
         this.mv = mv; 
     }
 
+    public void setup() {
+        mv.noLoop();
+         
+    }
+
     public void display() {
-
-        mv.stroke(mv.color(255,  100 - (500 * mv.getAmplitude())));
-       mv.strokeWeight(1 + (mv.getAmplitude() * 10));
-        mv.fill(PApplet.map(mv.getAmplitude() * 255, 0, 255, mv.fBase, mv.fSet), 255, 255, mv.getAmplitude() * 100);
-
-        mv.fill(PApplet.map(mv.getAmplitude() * 255, 0, 255, mv.fBase, mv.fSet), 255, 255, mv.getAmplitude() * 100);
-        mv.ellipse(mv.width / 2, mv.height / 2, 200 + (1000 * mv.getAmplitude()), 400);
-        mv.ellipse(mv.width / 2, mv.height / 2, 200 + (1200 * mv.getAmplitude()), 400);
-        mv.ellipse(mv.width / 2, mv.height / 2, 200 + (1400 * mv.getAmplitude()), 400);
-
         
-        mv.fill(PApplet.map(mv.getAmplitude() * 255, 0, 255, mv.fBase, mv.fSet), 255, 255, mv.getAmplitude() * 100);
-        mv.ellipse(mv.width / 2, mv.height / 2, 300 + (300 * mv.getSmoothedAmplitude()), 300 + (300 * mv.getSmoothedAmplitude()));
+
+        mv.translate(mv.width/2, mv.height/2);
+
+ 
+        float pstep = 30;
+        float pmax = 800; 
+
+        for (float p=0; p<pmax; p+=pstep) {
+
+            float c = 2*3.14f*p; //circumference
+            float csegment = PApplet.map(p, 0, pmax, pstep*3/4, pstep/2);
+            float segment = (c/csegment); //angle segment
+            float ellipseS = PApplet.map(p, 0, pmax, pstep*3/4-1, pstep/4); 
+
+            for (float a=0; a<360; a+=360/segment) {
+
+                mv.fill(mv.random(255), mv.random(190), mv.random(220));
+                mv.noStroke();
+
+                mv.pushMatrix();
+                mv.rotate(PApplet.radians(a));
+                mv.ellipse(p, 0, ellipseS*mv.getAmplitude(), ellipseS*mv.getAmplitude());
+                mv.popMatrix();
+
+            } 
+        }
 
     }
 

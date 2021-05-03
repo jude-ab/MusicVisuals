@@ -18,10 +18,6 @@ public class MyVisual extends Visual
     //strength of spectrum
     float s = 0.10f; 
 
-    // color code
-    int fBase = 0;
-    int fSet = 80;
-
     Menu mn; 
 
     stars[] stars = new stars[200];
@@ -87,7 +83,7 @@ public class MyVisual extends Visual
         startMinim();
                 
         // Call loadAudio to load an audio file to process 
-        loadAudio("shakira.mp3"); 
+        loadAudio("ice.mp3"); 
 
         
         cl = new circle(this);
@@ -128,6 +124,8 @@ public class MyVisual extends Visual
 
         if(state == 2){
 
+          
+
             cl.display(); 
         }
 
@@ -146,9 +144,11 @@ public class MyVisual extends Visual
 
         if(state == 4){
 
-            //use bands to see a block with sin wave in the middle
             calculateAverageAmplitude();
-            try
+
+            
+            //use bands to see a block with sin wave in the middle
+            /* try
             {
                 calculateFFT();
             }
@@ -159,10 +159,10 @@ public class MyVisual extends Visual
             calculateFrequencyBands();
             float[] bands = getSmoothedBands();
             
-            sq.display(bands[7]); 
+            sq.display(bands[7]); */
 
             //use Amplitude to see only sin waves 
-            //sq.display(getAmplitude() / 15.0f); 
+            sq.display(getAmplitude() / 15.0f); 
         }
 
         if(state == 5)
@@ -181,5 +181,7 @@ public class MyVisual extends Visual
 
        
  }
+
+
 
 }
