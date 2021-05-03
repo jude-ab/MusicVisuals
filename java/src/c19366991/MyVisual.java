@@ -6,9 +6,9 @@ import ie.tudublin.VisualException;
 public class MyVisual extends Visual
 {   
      
-    circle cl;
+    stars cl;
     squares sq; 
-    stars st;  
+    snow st;  
 
     //to choose both
     boolean both = false;
@@ -20,7 +20,7 @@ public class MyVisual extends Visual
 
     Menu mn; 
 
-    stars[] stars = new stars[200];
+    snow[] stars = new snow[200];
     int numstars;
 
     public void settings()
@@ -86,14 +86,14 @@ public class MyVisual extends Visual
         loadAudio("ice.mp3"); 
 
         
-        cl = new circle(this);
+        cl = new stars(this);
         sq = new squares(this, random(0, 100), height / 2); 
         mn = new Menu(this);
     
         numstars = 200;
         for(int i = 0; i < numstars; i++)
         {
-            stars[i] = new stars(this); 
+            stars[i] = new snow(this); 
             
          
         }

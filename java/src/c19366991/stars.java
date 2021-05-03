@@ -1,61 +1,52 @@
 package c19366991;
 
-import processing.core.PApplet;
+import processing.core.*;
+
 
 public class stars {
 
-    MyVisual mv; 
-    int numstars;
-    stars[] stars = new stars[400];   
-    float y;
-    float x;
-    float z;
-    float max = 1000;
-    float start = -1000;
- 
+    MyVisual mv;
     
 
-    public stars(MyVisual mv){
+    public stars(MyVisual mv) {
 
         this.mv = mv; 
-        y = mv.random(-mv.height, mv.height);
-        x = mv.random(-mv.width, mv.width);
-        z = mv.random(mv.width); 
-        
     }
 
-    public void update(){
+    public void setup() {
+        mv.noLoop();
+         
+    }
 
-        z = z - 10;
+    public void display() {
+        
 
-        if(z < 1){
+        mv.translate(mv.width/2, mv.height/2);
 
-            z = mv.width;
-            y = mv.random(-mv.height, mv.height);
-            x = mv.random(-mv.width, mv.width);
+ 
+        float pstep = 30;
+        float pmax = 500; 
+
+        for (float p=0; p<pmax; p+=pstep) {
+
+            float c = 2*3.14f*p; //circumference
+            float csegment = PApplet.map(p, 0, pmax, pstep*3/4, pstep/2);
+            float segment = (c/csegment); //angle segment
+            float ellipseS = PApplet.map(p, 0, pmax, pstep*3/4-1, pstep/4); 
+
+            for (float a=0; a<360; a+=360/segment) {
+
+                mv.fill(mv.random(255), mv.random(190), mv.random(220));
+                mv.noStroke();
+
+                mv.pushMatrix();
+                mv.rotate(PApplet.radians(a));
+                mv.ellipse(p, 0, ellipseS*mv.getAmplitude(), ellipseS*mv.getAmplitude());
+                mv.popMatrix();
+
+            } 
         }
+
     }
-
-    public void display(){
-
-        
-        mv.fill(255);
-        mv.stroke(PApplet.map(mv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
-
-        float sx = PApplet.map(x / z, 0, 1, 0, mv.width);
-        float sy = PApplet.map(y / z, 0, 1, 0, mv.height);
-
-        float r = PApplet.map(z, 0, mv.width, 16, 0);
-        mv.ellipse(sx, sy, r, r);
-
-        
-        y += ((max * mv.getAmplitude()) * 0.2f);
-        if (y >= max)
-        {
-            y = start;
-        }
-        
-    }
-
 
 }
