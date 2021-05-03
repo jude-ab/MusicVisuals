@@ -25,7 +25,7 @@ public class stars {
 
  
         float pstep = 30;
-        float pmax = 500; 
+        float pmax = 600; 
 
         for (float p=0; p<pmax; p+=pstep) {
 
