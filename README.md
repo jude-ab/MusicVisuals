@@ -1,8 +1,8 @@
 # Music Visualiser Project
 
-Name:
+Name: Jude Abouhajar
 
-Student Number: 
+Student Number: C19366991
 
 ## Instructions
 - Fork this repository and use it a starter project for your assignment
@@ -12,6 +12,7 @@ Student Number:
 - Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
 
 # Description of the assignment
+
 
 # Instructions
 
