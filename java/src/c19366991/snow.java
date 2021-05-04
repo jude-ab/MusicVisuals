@@ -5,8 +5,8 @@ import processing.core.PApplet;
 public class snow {
 
     MyVisual mv; 
-    int numstars;
-    snow[] stars = new snow[400];   
+    int numsnows;
+    snow[] snow = new snow[400];   
     float y;
     float x;
     float z;
@@ -40,13 +40,13 @@ public class snow {
 
         
         mv.fill(255);
-        mv.stroke(PApplet.map(mv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
+        mv.stroke(48, 139, 206);
 
         float sx = PApplet.map(x / z, 0, 1, 0, mv.width);
         float sy = PApplet.map(y / z, 0, 1, 0, mv.height);
 
-        float r = PApplet.map(z, 0, mv.width, 16, 0);
-        mv.ellipse(sx, sy, r, r);
+        float n = PApplet.map(z, 0, mv.width, 16, 0);
+        mv.ellipse(sx, sy, n, n);
 
         
         y += ((max * mv.getAmplitude()) * 0.2f);

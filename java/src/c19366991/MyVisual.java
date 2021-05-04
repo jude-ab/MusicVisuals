@@ -6,28 +6,21 @@ import ie.tudublin.VisualException;
 public class MyVisual extends Visual
 {   
      
-    stars cl;
+    stars st;
     squares sq; 
-    snow st;  
-
-    //to choose both
-    boolean both = false;
-    int bothcount = 0;
-    boolean choice = true; 
-
-    //strength of spectrum
-    float s = 0.10f; 
+    snow sn;  
 
     Menu mn; 
 
-    snow[] stars = new snow[200];
-    int numstars;
+    snow[] snow = new snow[200];
+    int numsnows;
 
     public void settings()
     {
         //use P3D for 3D graphics
         //setting screen size 
-        size(800, 800, P3D); 
+        size(800, 800, P3D);
+        
     }
 
     
@@ -44,12 +37,12 @@ public class MyVisual extends Visual
 
         if (key == '1')
         {
-            state = 2; //circle
+            state = 2; //stars
         }
 
         if (key == '2')
         {
-            state = 3; //stars
+            state = 3; //snow
         }
 
         if (key == '3')
@@ -59,7 +52,7 @@ public class MyVisual extends Visual
 
         if(key == '4')
         {
-            state = 5; //both stars and circle 
+            state = 5; //both stars and snow 
         }
 
         if (key == 'p')///to pause song
@@ -86,14 +79,14 @@ public class MyVisual extends Visual
         loadAudio("ice.mp3"); 
 
         
-        cl = new stars(this);
+        st = new stars(this);
         sq = new squares(this, random(0, 100), height / 2); 
         mn = new Menu(this);
     
-        numstars = 200;
-        for(int i = 0; i < numstars; i++)
+        numsnows = 200;
+        for(int i = 0; i < numsnows; i++)
         {
-            stars[i] = new snow(this); 
+            snow[i] = new snow(this); 
             
          
         }
@@ -125,18 +118,17 @@ public class MyVisual extends Visual
         if(state == 2){
 
           
-
-            cl.display(); 
+            st.display(); 
         }
 
        
         if(state == 3){
 
 
-            for(int i = 0; i < numstars; i++)
+            for(int i = 0; i < numsnows; i++)
             {
-                stars[i].display(); 
-                stars[i].update();
+                snow[i].display(); 
+                snow[i].update();
             
             }
         }
@@ -168,11 +160,11 @@ public class MyVisual extends Visual
         if(state == 5)
         {
 
-            cl.display();
-            for(int i = 0; i < numstars; i++)
+            st.display();
+            for(int i = 0; i < numsnows; i++)
             {
-                stars[i].display(); 
-                stars[i].update();
+                snow[i].display(); 
+                snow[i].update();
 
             }
 

@@ -2,7 +2,6 @@ package c19366991;
 
 import processing.core.*;
 
-
 public class stars {
 
     MyVisual mv;
@@ -13,10 +12,14 @@ public class stars {
         this.mv = mv; 
     }
 
+    
+
+
     public void setup() {
         mv.noLoop();
          
     }
+
 
     public void display() {
         
@@ -25,7 +28,7 @@ public class stars {
 
  
         float pstep = 30;
-        float pmax = 600; 
+        float pmax = 1000; 
 
         for (float p=0; p<pmax; p+=pstep) {
 
@@ -41,7 +44,7 @@ public class stars {
 
                 mv.pushMatrix();
                 mv.rotate(PApplet.radians(a));
-                mv.ellipse(p, 0, ellipseS*mv.getAmplitude(), ellipseS*mv.getAmplitude());
+                mv.ellipse(p, 0, ellipseS*mv.getAmplitude()*2, ellipseS*mv.getAmplitude());//multiplied to increase size of the smaller circles. 
                 mv.popMatrix();
 
             } 
@@ -50,3 +53,5 @@ public class stars {
     }
 
 }
+
+
