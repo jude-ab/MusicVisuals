@@ -96,6 +96,6 @@ Mainly, I am proud of how I got the squares in the waves and the stars visualisa
 
 # Youtube video:
 
-[![YouTube](https://youtu.be/2IzP3PfdiKQ)
+[YouTube](https://youtu.be/2IzP3PfdiKQ)
 
 
