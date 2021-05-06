@@ -169,8 +169,6 @@ public class MyVisual extends Visual
             }
 
         }
-
-
        
  }
 

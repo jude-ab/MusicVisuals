@@ -13,8 +13,6 @@ public class stars {
     }
 
     
-
-
     public void setup() {
         mv.noLoop();
          
