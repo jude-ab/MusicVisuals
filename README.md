@@ -15,6 +15,7 @@ The stars visual consists of a circle made up of many smaller circles that takes
 •	Open the folder in Visual Studio Code.
 •	Run from Main.java in ie/tudublin. 
 •	Press M to view the menu:
+
 		o Space: play the music.
 		o P: Pause.
 		o Press 1: play stars visual.
@@ -78,6 +79,7 @@ public void keyPressed()	{
 
 # What I am most proud of in the assignment
 I am proud of how in the end all the visuals came out as planned and how much I’ve learned about processing while doing this assignment. I learned many interesting new ideas and concepts such as:
+
 	• Use of radians.
 	• How to get an object to react to the beat of the music.
 	• Using mathematical concepts in processing.
