@@ -72,15 +72,16 @@ public void keyPressed()	{
 ```
 
 # How it works
-•All the visuals that I designed run through MyVisual.java in the package C19366991. When looking through MyVisual.java, you can see that I included constructors for the visuals that I called in setup(). This was included to create the visuals from inside the draw function. The display functions are called here for each of the visuals.
+• All the visuals that I designed run through MyVisual.java in the package C19366991. When looking through MyVisual.java, you can see that I included constructors for the visuals that I called in setup(). This was included to create the visuals from inside the draw function. The display functions are called here for each of the visuals.
 
-•I also added an alternative for the wave visual, so if you wish to see the “waves” in a block with a single sin wave in the middle, you uncomment lines 141-155 (calculatefFrequencyBands( );). 
+• I also added an alternative for the wave visual, so if you wish to see the “waves” in a block with a single sin wave in the middle, you uncomment lines 141-155 (calculatefFrequencyBands( );). 
 
-•When the user presses the space bar, the music starts playing in the background while the visuals responded to the music. 
+• When the user presses the space bar, the music starts playing in the background while the visuals responded to the music. 
 
 
 
 # What I am most proud of in the assignment
+
 I am proud of how in the end all the visuals came out as planned and how much I’ve learned about processing while doing this assignment. I learned many interesting new ideas and concepts such as:
 
 	• Use of radians.
@@ -93,7 +94,7 @@ Mainly, I am proud of how I got the squares in the waves and the stars visualisa
 
 
 
-Youtube video:
+# Youtube video:
 
 [![YouTube](https://youtu.be/2IzP3PfdiKQ)
 
