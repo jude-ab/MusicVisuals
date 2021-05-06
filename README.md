@@ -76,7 +76,7 @@ public void keyPressed()	{
 
 • I also added an alternative for the wave visual, so if you wish to see the “waves” in a block with a single sin wave in the middle, you uncomment lines 141-155 (calculatefFrequencyBands( );). 
 
-• When the user presses the space bar, the music starts playing in the background while the visuals responded to the music. 
+• When the user presses the space bar, the music starts playing in the background while the visuals respond to the music. 
 
 
 
