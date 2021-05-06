@@ -12,10 +12,12 @@ The stars visual consists of a circle made up of many smaller circles that takes
 
 # Instructions
 •	Download the repository.
+
 •	Open the folder in Visual Studio Code.
+
 •	Run from Main.java in ie/tudublin. 
 
-•	o Press M to view the menu:
+•	 Press M to view the menu:
 
 	o Space: play the music.
 	o P: Pause.
