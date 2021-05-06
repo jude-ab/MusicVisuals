@@ -14,14 +14,15 @@ The stars visual consists of a circle made up of many smaller circles that takes
 •	Download the repository.
 •	Open the folder in Visual Studio Code.
 •	Run from Main.java in ie/tudublin. 
-•	Press M to view the menu:
 
-		o Space: play the music.
-		o P: Pause.
-		o Press 1: play stars visual.
-		o Press 2: play snow visual.
-		o Press 3: play the wave visual.
-		o Press 4: play both the stars and snow visual. 
+•	o Press M to view the menu:
+
+	o Space: play the music.
+	o P: Pause.
+	o Press 1: play stars visual.	
+	o Press 2: play snow visual.
+	o Press 3: play the wave visual.
+	o Press 4: play both the stars and snow visual. 
 		
 •	Code for the options:
 
